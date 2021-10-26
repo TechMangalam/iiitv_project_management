@@ -1,27 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+// import "./App.css"
+import React from 'react';
+import NavbarCustom from './Components/Navbar/NavbarCustom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Home from './Components/Pages';
+import Admin from './Components/Pages/Admin';
+import Student from './Components/Pages/Student';
+import Faculty from './Components/Pages/Faculty';
+import SignUp from "./Components/SignUP/SignUp";
+import Login from "./Login/Login";
+
 
 function App() {
-  return (
-    <div className="App">
-      <h1>IIITV Project Management</h1>
-      <h3>Software Engineering Project</h3>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return(
+        <Router>
+
+            <NavbarCustom />
+            <Route path="/SignUp" exact component={SignUp}/>
+            <Route path="/Student" exact component={Student}/>
+            <Switch>
+                <Route path='/' exact component={Home} />
+                <Route path='/Faculty' component={Faculty} />
+                <Route path='/Admin' component={Admin} />
+                <Route path='/Login'  component={Login} />
+            </Switch>
+        </Router>
+
+    );
+
 }
 
 export default App;
