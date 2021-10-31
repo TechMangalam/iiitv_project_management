@@ -7,7 +7,7 @@ import {Accordion, Card, useAccordionButton} from "react-bootstrap";
 
 const Faculty = () => {
 
-	function CustomToggle({ children, eventKey }) {
+	function CustomToggle({ children, eventKey,name }) {
 		const decoratedOnClick = useAccordionButton(eventKey, () =>
 			console.log('totally custom!'),
 		);
@@ -15,15 +15,22 @@ const Faculty = () => {
 		return (
 			<div className="d-flex row">
 
-				<p className="col-8 my-auto mx-3">Mangalam Pandey</p>
+				<p className="col-8 my-auto mx-3">{name}</p>
 
 				<button className="col-1 btn btn-outline-info mx-auto"
 					type="button"
 
 					onClick={decoratedOnClick}
 				>
-					{children}
+					View
 				</button>
+
+				<button className="col-2 btn btn-outline-success mx-auto">
+					Approve
+				</button>
+
+				<p className="my-auto mx-3">{children}</p>
+
 			</div>
 
 		);
@@ -47,11 +54,12 @@ return (
 			</SidebarHeader>
 			<SidebarContent>
 				<Menu iconShape="square">
-					<MenuItem icon={<FaGem />} >Dashboard</MenuItem>
-					<SubMenu title="Components" icon={<FaHeart />}>
-						<MenuItem>Component 1</MenuItem>
-						<MenuItem>Component 2</MenuItem>
-					</SubMenu>
+					<MenuItem icon={<FaGem />} >201951089</MenuItem>
+					<MenuItem icon={<FaGem />} >Mangalam Pandey</MenuItem>
+					{/*<SubMenu title="Components" icon={<FaHeart />}>*/}
+					{/*    <MenuItem>Component 1</MenuItem>*/}
+					{/*    <MenuItem>Component 2</MenuItem>*/}
+					{/*</SubMenu>*/}
 				</Menu>
 			</SidebarContent>
 			<SidebarFooter>
@@ -68,177 +76,211 @@ return (
 
 				<Card>
 					<Card.Header >
-						<CustomToggle eventKey="3">View</CustomToggle>
+						<CustomToggle eventKey="3" name="201951089 Mangalam Pandey">IIITV Project Management</CustomToggle>
+
 					</Card.Header>
 					<Accordion.Collapse eventKey="3">
 						<Card.Body>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-							veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-							commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-							velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-							cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-							est laborum.
+							<h5>Description :</h5>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+								veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+								commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+								velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+								cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+								est laborum.
+							</p>
 						</Card.Body>
 					</Accordion.Collapse>
 				</Card>
 				<Card>
 					<Card.Header >
-						<CustomToggle eventKey="4">View</CustomToggle>
+						<CustomToggle eventKey="4" name="201951008 Abhishek Kumar Prajapati">Sports News and Live Scores</CustomToggle>
 					</Card.Header>
 					<Accordion.Collapse eventKey="4">
 						<Card.Body>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-							veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-							commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-							velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-							cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-							est laborum.
+							<h5>Description :</h5>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+								veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+								commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+								velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+								cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+								est laborum.
+							</p>
 						</Card.Body>
 					</Accordion.Collapse>
 				</Card>
 				<Card>
 					<Card.Header >
-						<CustomToggle eventKey="5">View</CustomToggle>
+						<CustomToggle eventKey="5" name="201951024 Anurodh Singh">ERP for IIIT Vadodara</CustomToggle>
 					</Card.Header>
 					<Accordion.Collapse eventKey="5">
 						<Card.Body>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-							veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-							commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-							velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-							cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-							est laborum.
+							<h5>Description :</h5>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+								veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+								commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+								velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+								cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+								est laborum.
+							</p>
 						</Card.Body>
 					</Accordion.Collapse>
 				</Card>
 				<Card>
 					<Card.Header >
-						<CustomToggle eventKey="6">View</CustomToggle>
+						<CustomToggle eventKey="6" name="201951018 Aman Kothari">Chat bot using supervised learning.</CustomToggle>
 					</Card.Header>
 					<Accordion.Collapse eventKey="6">
 						<Card.Body>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-							veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-							commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-							velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-							cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-							est laborum.
+							<h5>Description :</h5>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+								veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+								commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+								velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+								cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+								est laborum.
+							</p>
 						</Card.Body>
 					</Accordion.Collapse>
 				</Card>
 				<Card>
 				<Card.Header >
-					<CustomToggle eventKey="7">View</CustomToggle>
+					<CustomToggle eventKey="7" name="201951137 Saurabh Kumar Jaiswar">Web crawling website</CustomToggle>
 				</Card.Header>
 				<Accordion.Collapse eventKey="7">
 					<Card.Body>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-						veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-						commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-						velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-						cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-						est laborum.
+						<h5>Description :</h5>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+							veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+							commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+							velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+							cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+							est laborum.
+						</p>
 					</Card.Body>
 				</Accordion.Collapse>
 			</Card>
 				<Card>
 					<Card.Header >
-						<CustomToggle eventKey="8">View</CustomToggle>
+						<CustomToggle eventKey="8" name="201951117 Prashant Garg">Chatting App</CustomToggle>
 					</Card.Header>
 					<Accordion.Collapse eventKey="8">
 						<Card.Body>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-							veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-							commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-							velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-							cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-							est laborum.
+							<h5>Description :</h5>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+								veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+								commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+								velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+								cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+								est laborum.
+							</p>
 						</Card.Body>
 					</Accordion.Collapse>
 				</Card>
 				<Card>
 					<Card.Header >
-						<CustomToggle eventKey="9">View</CustomToggle>
+						<CustomToggle eventKey="9" name="201951049 Chirag Jain">Photo Gallery Website</CustomToggle>
 					</Card.Header>
 					<Accordion.Collapse eventKey="9">
 						<Card.Body>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-							veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-							commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-							velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-							cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-							est laborum.
+							<h5>Description :</h5>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+								veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+								commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+								velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+								cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+								est laborum.
+							</p>
 						</Card.Body>
 					</Accordion.Collapse>
 				</Card>
 				<Card>
 					<Card.Header >
-						<CustomToggle eventKey="10">View</CustomToggle>
+						<CustomToggle eventKey="10" name="201951083 Krishna Gaur">Scan text from handwritten text</CustomToggle>
 					</Card.Header>
 					<Accordion.Collapse eventKey="10">
 						<Card.Body>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-							veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-							commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-							velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-							cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-							est laborum.
+							<h5>Description :</h5>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+								veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+								commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+								velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+								cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+								est laborum.
+							</p>
 						</Card.Body>
 					</Accordion.Collapse>
 				</Card>
 				<Card>
 					<Card.Header >
-						<CustomToggle eventKey="11">View</CustomToggle>
+						<CustomToggle eventKey="11" name="201951086 Lavesh Panghal">Identifying object app</CustomToggle>
 					</Card.Header>
 					<Accordion.Collapse eventKey="11">
 						<Card.Body>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-							veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-							commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-							velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-							cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-							est laborum.
+							<h5>Description :</h5>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+								veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+								commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+								velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+								cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+								est laborum.
+							</p>
 						</Card.Body>
 					</Accordion.Collapse>
 				</Card>
 				<Card>
 					<Card.Header >
-						<CustomToggle eventKey="12">View</CustomToggle>
+						<CustomToggle eventKey="12" name="201951090 Manjot Singh">Event Management app</CustomToggle>
 					</Card.Header>
 					<Accordion.Collapse eventKey="12">
 						<Card.Body>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-							veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-							commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-							velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-							cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-							est laborum.
+							<h5>Description :</h5>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+								veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+								commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+								velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+								cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+								est laborum.
+							</p>
 						</Card.Body>
 					</Accordion.Collapse>
 				</Card>
 				<Card>
 					<Card.Header >
-						<CustomToggle eventKey="13">View</CustomToggle>
+						<CustomToggle eventKey="13" name="201951088 Malsani Raykant Reddy">Community for gamers</CustomToggle>
 					</Card.Header>
 					<Accordion.Collapse eventKey="13">
 						<Card.Body>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-							veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-							commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-							velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-							cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-							est laborum.
+							<h5>Description :</h5>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+								veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+								commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+								velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+								cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+								est laborum.
+							</p>
 						</Card.Body>
 					</Accordion.Collapse>
 				</Card>

@@ -25,7 +25,7 @@ const SignUp = () => {
                 updateProfile(auth.currentUser, {
                     displayName: userName
                 }).then(() => {
-                    history.push("/Admission")
+                    history.push("/")
 
                 }).catch((error) => {
                     // An error occurred

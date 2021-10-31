@@ -51,7 +51,7 @@ return (
         &emsp; IIITV Project Management
         </a>
 
-		<NavLink to='/Login' >
+		<NavLink to='/Student' >
 			Students
 		</NavLink>
 		<NavLink to='/Faculty' >
@@ -62,7 +62,7 @@ return (
 		</NavLink>
 
         <form className="d-flex h-100">
-            <input className="form-control mx-auto h-50 my-auto" type="search" placeholder="Search" aria-label="Search"/>
+            {/*<input className="form-control mx-auto h-50 my-auto" type="search" placeholder="Search" aria-label="Search"/>*/}
             &emsp;
             <button className="btn btn-outline-success h-50 my-auto" onClick={logout} type="submit">Logout</button>
         </form>

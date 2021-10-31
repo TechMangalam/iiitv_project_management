@@ -36,27 +36,26 @@ const realDb = getDatabase();
 
 const auth = getAuth();
 onAuthStateChanged(auth, (user) => {
-    // if (user) {
-    //   const uid = user.uid;
+    if (user) {
+      const uid = user.uid;
     //alert(uid)
 
 
-    ReactDOM.render(
+        ReactDOM.render(
+            <React.StrictMode>
+                <App />
+            </React.StrictMode>,
+            document.getElementById('root')
+        );
+
+    } else {
+      ReactDOM.render(
         <React.StrictMode>
-            <App />
+          <Login />
         </React.StrictMode>,
         document.getElementById('root')
-    );
-
-    // ...
-    // } else {
-    //   ReactDOM.render(
-    //     <React.StrictMode>
-    //       <Login />
-    //     </React.StrictMode>,
-    //     document.getElementById('root')
-    //   );
-    // }
+      );
+    }
 });
 
 

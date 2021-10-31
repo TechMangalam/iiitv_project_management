@@ -9,7 +9,9 @@ import 'fa-icons';
 
 
 const Login = () => {
-    const history = useHistory()
+
+    const historyr = useHistory()
+
     function login() {
 
 
@@ -26,7 +28,7 @@ const Login = () => {
 
                 const user = userCredential.user;
 
-                    history.push('/Student');
+                    historyr.push('/');
 
 
             })
@@ -39,7 +41,7 @@ const Login = () => {
     }
     function HandleSignUP() {
 
-       history.push("/SignUp")
+       historyr.push("/SignUp")
 
 
     }
